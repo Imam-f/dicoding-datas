@@ -11,3 +11,7 @@ pip install -r requirements.txt
 ```
 streamlit run Hello.py
 ```
+
+## Link steamlit app
+https://dicoding-datas-obrplxbgawrwkkdkubsffi.streamlit.app/
+
