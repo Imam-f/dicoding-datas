@@ -27,7 +27,7 @@ def main():
                        'hr':'hour',
                        'hum':'humidity',
                        'cnt':'count'})
-    day_bikes['dteday'] = day_bikes['dteday'].astype('datetime64')
+    day_bikes['dteday'] = day_bikes['dteday'].astype('datetime64[ns]')
     day_bikes['years'] = day_bikes['year'] + 2011
     day_bikes = day_bikes.drop(columns = ['instant', "workingday", "temp", "atemp", "humidity", "windspeed"])
     
