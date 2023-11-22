@@ -12,12 +12,6 @@ def main():
         - Email:    mohamadimamfirdaus17@gmail.com
         - Id Dicoding: imamfrd"""
     )
-    st.subheader('Menentukan Pertanyaan Bisnis')
-    st.markdown("""
-        - Bagaimana perubahan kondisi cuaca sepanjang tahun 2011 dan 2012?
-        - Kapan orang paling sering menggunakan rental sepeda dan kapan orang paling jarang menggunakan rental sepeda?
-        - Apakah ada hubungan antara cuaca dan jumlah rental sepeda?"""
-    )
     # Load dataset
     # region
     day_bikes = pd.read_csv("./Bike-sharing-dataset/day.csv")
@@ -113,11 +107,6 @@ def main():
         plt.ylabel("Cuaca")
         st.pyplot(fig)
         
-    with st.expander("See explanation"):
-        st.markdown("""
-                    Plot di atas menunjukkan hubungan cuaca dan bulan pada tahun 2011 dan 2012. Data cuaca menunjukkan kondisi cuaca pada suatu hari. Semakin tinggi nilai cuaca, semakin sering pada rentang waktu tersebut terjadi hujan. Pada grafik dapat di lihat terdapat siklus tahunan dimana puncak berada pada awal tahun/musim dingin dan lembah berada pada tengah tahun/musim panas. Ini menunjukkan cuaca kurang baik lebih sering terjadi pada musim dingin dan cuaca cerah lebih sering terjadi pada musim panas.
-                    """
-        )
     # endregion
 
 
@@ -149,12 +138,7 @@ def main():
         plt.xlabel("Musim")
         plt.ylabel("Jumlah Peminjaman")
         st.pyplot(fig)
-        
-    with st.expander("See explanation"):
-        st.markdown("""
-                    Pada grafik terdapat garis yang menunjukkan hubungan antara bulan/musim dan jumlah rental. Jumlah peminjaman adalah total dari peminjaman kasual dan peminjaman terdaftar. Pada grafik di atas, terdapat 2 maksima, yaitu pada musim panas tahun 2011 dan 2012. Dapat juga diamati bahwa grafik di atas memiliki 2 minima pada sekitar bulan Januari di tahun 2011 dan 2012. Tetapi, maksima dan  minima pada tahun 2012 lebih tinggi dari 2011. Ini menunjukkan terdapat trend menanjak pada grafik tersebut.
-                    """
-        )
+      
     # endregion
 
 
@@ -206,20 +190,7 @@ def main():
         plt.tight_layout()
         st.pyplot(fig)  
     
-    with st.expander("See explanation"):
-        st.markdown("""
-                    Pada grafik di atas dapat dilihat kondisi cuaca dan jumlah pengunjung di waktu yang sama. Pada saat parameter cuaca tinggi, jumlah peminjaman cenderung rendah dan sebaliknya. Pada tabel korelasi pun, terlihat korelasi negatif antara jumlah rental dan cuaca.
-                    """
-        )
     # endregion
     
-    st.subheader('Conclusion')
-    st.markdown("""
-            - Kondisi cuaca berubah sesuai dengan perubahan musim, musim panas kondisi cuaca cenderung cerah dan memiliki sedikit hujan dan pada waktu musim gugur dan musim dingin terdapat lebih banyak cuaca yang tidak cerah.
-            - Jumlah pengguna rental mengikuti siklus tahunan dengan kecenderungan menanjak. Siklus tahunan ini memiliki puncak pada sekitar bulan Mei-Juli dan lembah pada bulan Desember-Februari.
-            - Terdapat korelasi negatif terhadap kondisi cuaca dan jumlah rental sepeda. Pada musim dingin dan musim gugur dimana kondisi cuaca kurang cerah, penggunaan rental sepeda relatif sedikit. Pada musim semi penggunaan rental bertambah dan berpuncak pada musim panas.
-                """
-    )
-
 if __name__ == "__main__":
     main()
