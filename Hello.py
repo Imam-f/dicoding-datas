@@ -112,10 +112,12 @@ def main():
         plt.xlabel("Bulan")
         plt.ylabel("Cuaca")
         st.pyplot(fig)
-    st.markdown("""
-                Plot di atas menunjukkan hubungan cuaca dan bulan pada tahun 2011 dan 2012. Data cuaca menunjukkan kondisi cuaca pada suatu hari. Semakin tinggi nilai cuaca, semakin sering pada rentang waktu tersebut terjadi hujan. Pada grafik dapat di lihat terdapat siklus tahunan dimana puncak berada pada awal tahun/musim dingin dan lembah berada pada tengah tahun/musim panas. Ini menunjukkan cuaca kurang baik lebih sering terjadi pada musim dingin dan cuaca cerah lebih sering terjadi pada musim panas.
-                """
-    )
+        
+    with st.expander("See explanation"):
+        st.markdown("""
+                    Plot di atas menunjukkan hubungan cuaca dan bulan pada tahun 2011 dan 2012. Data cuaca menunjukkan kondisi cuaca pada suatu hari. Semakin tinggi nilai cuaca, semakin sering pada rentang waktu tersebut terjadi hujan. Pada grafik dapat di lihat terdapat siklus tahunan dimana puncak berada pada awal tahun/musim dingin dan lembah berada pada tengah tahun/musim panas. Ini menunjukkan cuaca kurang baik lebih sering terjadi pada musim dingin dan cuaca cerah lebih sering terjadi pada musim panas.
+                    """
+        )
     # endregion
 
 
@@ -148,10 +150,11 @@ def main():
         plt.ylabel("Jumlah Peminjaman")
         st.pyplot(fig)
         
-    st.markdown("""
-                Pada grafik terdapat garis yang menunjukkan hubungan antara bulan/musim dan jumlah rental. Jumlah peminjaman adalah total dari peminjaman kasual dan peminjaman terdaftar. Pada grafik di atas, terdapat 2 maksima, yaitu pada musim panas tahun 2011 dan 2012. Dapat juga diamati bahwa grafik di atas memiliki 2 minima pada sekitar bulan Januari di tahun 2011 dan 2012. Tetapi, maksima dan  minima pada tahun 2012 lebih tinggi dari 2011. Ini menunjukkan terdapat trend menanjak pada grafik tersebut.
-                """
-    )
+    with st.expander("See explanation"):
+        st.markdown("""
+                    Pada grafik terdapat garis yang menunjukkan hubungan antara bulan/musim dan jumlah rental. Jumlah peminjaman adalah total dari peminjaman kasual dan peminjaman terdaftar. Pada grafik di atas, terdapat 2 maksima, yaitu pada musim panas tahun 2011 dan 2012. Dapat juga diamati bahwa grafik di atas memiliki 2 minima pada sekitar bulan Januari di tahun 2011 dan 2012. Tetapi, maksima dan  minima pada tahun 2012 lebih tinggi dari 2011. Ini menunjukkan terdapat trend menanjak pada grafik tersebut.
+                    """
+        )
     # endregion
 
 
@@ -202,10 +205,12 @@ def main():
 
         plt.tight_layout()
         st.pyplot(fig)  
-    st.markdown("""
-                Pada grafik di atas dapat dilihat kondisi cuaca dan jumlah pengunjung di waktu yang sama. Pada saat parameter cuaca tinggi, jumlah peminjaman cenderung rendah dan sebaliknya. Pada tabel korelasi pun, terlihat korelasi negatif antara jumlah rental dan cuaca.
-                """
-    )
+    
+    with st.expander("See explanation"):
+        st.markdown("""
+                    Pada grafik di atas dapat dilihat kondisi cuaca dan jumlah pengunjung di waktu yang sama. Pada saat parameter cuaca tinggi, jumlah peminjaman cenderung rendah dan sebaliknya. Pada tabel korelasi pun, terlihat korelasi negatif antara jumlah rental dan cuaca.
+                    """
+        )
     # endregion
     
     st.subheader('Conclusion')
