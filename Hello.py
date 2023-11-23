@@ -5,13 +5,6 @@ import streamlit as st
 
 def main():
     st.header('Proyek Analisis Data: Bike-sharing-dataset')
-    st.markdown("""
-        *source : https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset*
-
-        - Nama:     Mohamad Imam Firdaus
-        - Email:    mohamadimamfirdaus17@gmail.com
-        - Id Dicoding: imamfrd"""
-    )
     # Load dataset
     # region
     day_bikes = pd.read_csv("./Bike-sharing-dataset/day.csv")
